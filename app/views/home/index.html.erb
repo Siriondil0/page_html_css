@@ -1,19 +1,24 @@
+<html>
 <nav>
-<ul class="nav-bar">
-  <li class="nav-logo" >Ici le logo</li>
-  <li class="nav-list" ><a class="nav-link" href="#home">Home</a></li>
-  <li class="nav-list"><a class="nav-link" href="#news">News</a></li>
-  <li class="nav-list nav-dropdown" style="float:right">
-    <a href="javascript:void(0)" class="nav-dropbtn"><img class="avatar-small" src="https://placeimg.com/640/480/nature/sepia"></img></a>
-    <div class="nav-dropdown-content">
-      <a href="#"><button class="btn-blue">Connection</button>
-</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+  <ul class="nav-bar">
+    <li class="nav-logo" ><%=image_tag("logo_site.png", alt: "Example Image")%></li>
+    
+    <div class="nav-int">
+      <li class="nav-list" ><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-list"><a class="nav-link" href="#news">News</a></li>
     </div>
-  </li>
-</ul>
+    
+    <li class="nav-list nav-dropdown" style="float:right">
+      <a href="javascript:void(0)" class="nav-dropbtn"><img class="avatar-small" src="https://placeimg.com/640/480/nature/sepia"></img></a>
+      <div class="nav-dropdown-content">
+        <p>&nbsp;&nbsp;Bonjour visiteur!</p>
+        <a href="#">Ton profil</a>
+        <a href="#"><button class="btn-blue">Déconnection</button></a>
+      </div>
+    </li>
+  </ul>
 </nav>
+
 <img class="avatar" src="https://placeimg.com/640/480/nature/sepia"></img>
 <img class="avatar-small" src="https://placeimg.com/640/480/nature/sepia"></img>
 <img class="avatar-big" src="https://placeimg.com/640/480/nature/sepia"></img>
@@ -25,3 +30,4 @@
     <p>Architect & Engineer</p>
   </div>
 </div> 
+</html>
