@@ -1,33 +1,89 @@
 <html>
-<nav>
-  <ul class="nav-bar">
-    <li class="nav-logo" ><%=image_tag("logo_site.png", alt: "Example Image")%></li>
-    
-    <div class="nav-int">
-      <li class="nav-list" ><a class="nav-link" href="#home">Home</a></li>
-      <li class="nav-list"><a class="nav-link" href="#news">News</a></li>
-    </div>
-    
-    <li class="nav-list nav-dropdown" style="float:right">
-      <a href="javascript:void(0)" class="nav-dropbtn"><img class="avatar-small" src="https://placeimg.com/640/480/nature/sepia"></img></a>
-      <div class="nav-dropdown-content">
-        <p>&nbsp;&nbsp;Bonjour visiteur!</p>
-        <a href="#">Ton profil</a>
-        <a href="#"><button class="btn-blue">Déconnection</button></a>
-      </div>
-    </li>
-  </ul>
-</nav>
 
-<img class="avatar" src="https://placeimg.com/640/480/nature/sepia"></img>
-<img class="avatar-small" src="https://placeimg.com/640/480/nature/sepia"></img>
-<img class="avatar-big" src="https://placeimg.com/640/480/nature/sepia"></img>
-<div class="card">
+
+<body>
+  <nav>
+    <ul class="nav-bar">
+      <li class="nav-logo" ><%=image_tag("logo_site.png", alt: "Example Image")%></li>
+      <div class="nav-int">
+        <li class="nav-list" ><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-list"><a class="nav-link" href="#news">News</a></li>
+      </div>
+      <li class="nav-list nav-dropdown" style="float:right">
+        <a href="javascript:void(0)" class="nav-dropbtn"><%=image_tag("no.jpg", class:"avatar-small")%></img></a>
+        <div class="nav-dropdown-content">
+          <p>&nbsp;&nbsp;Bonjour visiteur!</p>
+          <a href="#">Ton profil</a>
+          <a href="#"><button class="btn-blue">Déconnection</button></a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+  <div class= container>
+    <div id="tab">
+      <button class="btn-tabs" onclick="openTab('Hollow')">Hollow</button>
+      <button class="btn-tabs" onclick="openTab('Ori')" >Blind Forest</button>
+      <button class="btn-tabs" onclick="openTab('Cells')">Cells</button>
+    </div>
   
-  <img class="avatar-big" src="https://placeimg.com/640/480/nature/sepia"></img>
-  <div class="card-content">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
+    <div id="Hollow" class="intab">
+      <div class="card">
+        <%=image_tag("hollow.png", class:"avatar-big")%>
+        <div class="card-content">
+          <h4 align="center"><b>The knight</b></h4>
+          <p align="center">Could it achieve that impossible thing? Should it?</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Ori" class="intab" style="display:none">
+      <div class="card">
+        <%=image_tag("ori.jpeg", class:"avatar-big")%>
+        <div class="card-content">
+          <h4 align="center"><b>Ori</b></h4>
+          <p align="center">Though they are gone from our forest, there is no time to greave. Remember those who have passed, and they will forever live on</p>
+        </div>
+      </div>
+    </div>  
+
+    <div id="Cells" class="intab" style="display:none">
+      <div class="card">
+        <%=image_tag("deadcells.jpeg", class:"avatar-big")%>
+        <div class="card-content">
+          <h4 align="center"><b>The Fallen One</b></h4>
+          <p align="center">Aren't you the headless fellow that's been getting around? </p>
+        </div>
+      </div>
+    </div>
   </div>
-</div> 
+  </section>
+
+
+  <script>
+  /* change active tab */
+  var header = document.getElementById("tab");
+  var btns = header.getElementsByClassName("btn-tabs");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    if (current.length > 0) { 
+      current[0].className = current[0].className.replace(" active", "");
+    }
+    this.className += " active";
+    });
+  }
+  /* show the cards */
+  function openTab(tabName) {
+    var i;
+    var x = document.getElementsByClassName("intab");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(tabName).style.display = "block";  
+  }
+  </script>
+
+</body> 
 </html>

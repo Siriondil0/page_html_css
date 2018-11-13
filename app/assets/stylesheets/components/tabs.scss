@@ -1,0 +1,24 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  width: 700px;
+}
+
+#tab{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly ;
+
+}
+
+.intab{
+  width: 100%;
+  display: inline-block
+  
+}
+
+.active{
+  background-color: #6967ce;
+  border: 1px solid #3698f4;
+}
