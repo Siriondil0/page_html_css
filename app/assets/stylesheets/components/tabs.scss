@@ -14,8 +14,9 @@
 
 .intab{
   width: 100%;
-  display: inline-block
-  
+  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .active{
