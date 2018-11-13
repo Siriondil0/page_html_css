@@ -14,7 +14,7 @@ Il faudra que tu codes les éléments suivants :
 * une tabs
 
 ### Lien Heroku :
-[Lien exo sur Heroku](https://s7j2-css-avance.herokuapp.com/)
+[Lien exo sur Heroku](https://css-trop-avance.herokuapp.com/)
 
 ### Réalisé par :tea: :
 Guillaume Pichot  slack/  @Guillaume
