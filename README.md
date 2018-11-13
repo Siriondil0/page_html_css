@@ -1,4 +1,3 @@
-
 # THP Semaine 7 Jour 2
 
 Exercice provenant de [The Hacking Project](https://www.thehackingproject.org/)
